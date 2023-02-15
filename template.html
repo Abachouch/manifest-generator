@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifest Generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+        <header class="l-header">
+            <h1>Manifest Generator</h1>
+            <p class="app-description">Genarate Manifest.json file on client , no need for server</p>
+        </header>
+        <div class="editor">
+
+            <header class="editor__header">
+
+                <div class="traffic-lights">
+                    <div class="traffic-light traffic-light--red"></div>
+                    <div class="traffic-light traffic-light--yellow"></div>
+                    <div class="traffic-light traffic-light--green"></div>
+                </div>
+
+                <h2 class="editor__title">manifes.json </h2>
+                <div class="editor__controls">
+                    <div class="dowload-wraper hidden"  id="download">
+                        <button id="btnShowDownloadModal" >Download Icons</button>
+                        <div id="downloadPlaceHolder" class="download-placeholder">
+
+                        </div>
+                    </div>
+                    <button id="copy">Copy</button>
+                </div>
+            
+
+            </header>
+
+            <code id="code" class="code">
+
+            {
+            <div class="line">
+                <var>"name"</var> : <i>"<i id="nameInput" contenteditable="true" ></i>"</i>,
+            </div>
+
+            <div class="line">
+                <var>"short_name"</var> : <i>"<i id="shortNameInput" contenteditable="true" ></i>"</i>,
+            </div>
+
+            <div class="line">
+                <var>"description"</var> : <i>"<i id="descriptionInput" contenteditable="true" ></i>"</i>,
+            </div>
+
+            <div class="line">
+                <var>"theme_color"</var>: <i >"<color-picker class="value-color" id="themeColorInput" color="#f44e4e"></color-picker>"</i>,
+            </div>
+
+            <div class="line">
+                <var>"background_color"</var> : <i>"<color-picker class="value-color" id="backgroundColorInput" color="#cccccc"></color-picker>"</i>,
+            </div>
+
+
+            <div class="line">
+                <var >"display"</var>:
+                <i>"<select id="displayInput">
+                        <option value="browser">Browser</option>
+                        <option value="standalone">Standalone</option>
+                        <option value="minimal-ui">Minimal UI</option>
+                        <option value="fullscreen">Fullscreen</option>
+                    </select>"
+                </i>,
+            </div>
+
+            <div class="line">
+                <var >"scope"</var>
+                :<i>"<i id="scoupInput" contenteditable="true" ></i>"</i>,
+            </div>
+
+            <div class="line">
+                <var >"start_url"</var>:
+                <i >"<i id="startUrlInput" contenteditable="true" ></i>"</i>,
+            </div>
+
+            <div class="line">
+                <var >"icons"</var> : [<pre id="iconsCode" ></pre>]
+            </div>
+        }
+            </code>
+
+            <footer class="editor__footer">
+                <button id="iconChooser">Choose Icon</button>
+                <input type="file" accept=".png" id="iconInput">
+            </footer>
+        </div>
+    </main>
+
+    <aside class="l-preview">
+        <h4>Splash Screen Preview</h4>
+        <div class="phone">
+            <phone-header></phone-header>
+            <phone-body></phone-body>
+
+            <div class="phone__speaker"></div>
+            <div class="phone__button"></div>
+        </div>
+
+        <footer class="about">
+            Abachouch Youssouf Vanilla JS web Components 2023
+        </footer>
+    </aside>
+
+
+</body>
+
+</html>

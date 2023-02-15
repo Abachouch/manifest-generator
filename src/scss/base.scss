@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+select {
+    border: transparent;
+    background-color: transparent;
+    color: currentColor;
+    appearance: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    border: 1px solid white;
+        padding: .2rem 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+i{
+    color: #F8A7A7;
+}
+
+var{
+    color: #5A7FFF;
+}
+
+@media screen and (min-width : 900px ) {
+    body {
+        background-color: rgb(255, 255, 255);
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+        margin: 0;
+    }
+
+    main {
+        flex-grow: 2;
+        padding: 2rem;
+        overflow: auto;
+    }
+}
